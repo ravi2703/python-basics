@@ -5,6 +5,17 @@ phonebook = {
 }
 print(phonebook)
 
+#iterating over dictionaries
 phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
 for name, number in phonebook.items():
     print("Phone number of %s is %d" % (name, number))
+#if you want to add a new entry or delete a entry
+phonebook["jake"] = 990876541
+del phonebook["jill"]
+
+#to test the code
+if "jake" in phonebook:
+    print("jake is available in phonebook.")
+if "jill" not in phonebook:
+    print("jake is not available in phonebook.")
+
