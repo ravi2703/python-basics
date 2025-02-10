@@ -58,13 +58,15 @@ paper = '''
          _______)
 ---.__________)'''
 import random  
-game_images = ['rock', 'paper', 'scisors']
+game_images = [rock, paper, scisors]
 
 user_input = int(input("choose a number: 0 for rock, 1 for paper, 2 scisors"))
-print(game_images)
+if user_input >= 0 and user_input <=2:
+  print(game_images[user_input])
 
 computer_choice = random.randint(0, 2)
 print(f"comouter choice id {computer_choice}")
+print(game_images[computer_choice])
 
 if user_input >= 3 or user_input < 0:
   print("invalid number")
@@ -72,5 +74,7 @@ elif user_input == 0 and computer_choice == 2:
   print("you won")
 elif user_input > computer_choice:
   print("you won")
+elif user_input < computer_choice:
+  print("you lose")
 elif user_input == computer_choice:
   print("print draw")
